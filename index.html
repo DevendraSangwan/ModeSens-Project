@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ModeSens Clone</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -25,7 +26,7 @@
             <p class="sub-description">
                 Search anything and get it at the best price with the world's most intelligent purchase assistant.
             </p>
-            <button class="cta-black">JOIN NOW</button>
+            <button class="join-now-inline">JOIN NOW</button>
         </section>
 
         <section class="product-container">
@@ -113,65 +114,61 @@
     <div class="filter-tags" id="filter-tags">
         </div>
 </section>
-
-<footer class="main-footer">
-    <hr class="footer-divider">
-    <div class="footer-cta">
-        <p class="tagline-small">READY TO SHOP SMARTER?</p>
-        <h2 class="serif-heading-footer">Join now to instantly find the best price</h2>
-        <button class="cta-black">JOIN MODESENS</button>
-    </div>
-    
-    <div class="footer-links">
-        <div>
-            <h4>CUSTOMER CARE</h4>
-            <p>DON'T MISS OUT</p>
-            <div class="newsletter">
-                <input type="checkbox" id="women"> <label for="women">Women's</label>
-                <input type="checkbox" id="men"> <label for="men">Men's</label>
-                <br>
-                <input type="email" placeholder="Email Address">
-                <button>JOIN NOW</button>
-            </div>
-        </div>
-        <div><h4>INFORMATION</h4></div>
-        <div><h4>LEGAL</h4></div>
-        <div><h4>CONNECT WITH US</h4></div>
-    </div>
-</footer>
-    </main>
-    <footer class="footer">
+</main>
+  <footer class="footer">
     <div class="footer-cta-box">
         <p class="ready-text">READY TO SHOP SMARTER?</p>
-        <h2 class="serif-h2">Join now to instantly find the best price</h2>
+        <h2 class="serif-h2">Join now to instantly <br>find the best price</h2>
         <button class="join-black-btn">JOIN MODESENS</button>
     </div>
 
     <div class="footer-main-links">
+        
         <div class="footer-column">
-            <h3><i class="fab fa-modx"></i> CUSTOMER CARE</h3>
+            <h3>CUSTOMER CARE</h3>
             <p class="newsletter-sub">DON'T MISS OUT</p>
-            <p class="small-text">Sign up for price alerts on your favorite items—never miss a sale.</p>
+            <p class="small-text">Sign up for price alerts on your <br>favorite items—never miss a sale or <br>special promo code again.</p>
             <div class="radio-group">
-                <input type="radio" name="gender" id="w"> <label for="w">Women's</label>
-                <input type="radio" name="gender" id="m"> <label for="m">Men's</label>
+                <label><input type="radio" name="gender" checked> <span>Women's</span></label>
+                <label><input type="radio" name="gender"> <span>Men's</span></label>
             </div>
-            <div class="footer-input">
-                <input type="email" placeholder="Email Address">
+            <div class="footer-input-container">
+                <input type="email" placeholder="Email Address"><br>
                 <button class="join-now-inline">JOIN NOW</button>
             </div>
         </div>
-        <div class="footer-column"><h3>INFORMATION</h3></div>
-        <div class="footer-column"><h3>LEGAL</h3></div>
-        <div class="footer-column"><h3>CONNECT WITH US</h3></div>
+
+        <div class="footer-column">
+            <h3>INFORMATION</h3>
+            <ul class="footer-list">
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h3>LEGAL</h3>
+            <ul class="footer-list">
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h3>CONNECT WITH US</h3>
+        </div>
     </div>
 
     <div class="footer-bottom">
-        <p>© 2026, ModeSens Inc</p>
-        <div class="theme-switcher">
-            <button id="light-mode"><i class="fas fa-sun"></i> Light</button>
-            <button id="dark-mode"><i class="fas fa-moon"></i> Dark</button>
-        </div>
+    <p>© 2026, ModeSens Inc</p>
+    <div class="theme-switcher">
+        <button id="light-mode" class="active"><i class="fas fa-sun"></i> Light</button>
+        <button id="dark-mode"><i class="fas fa-moon"></i> Dark</button>
+    </div>
+
+    <div class="social-icons align-right-top">
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-pinterest-p"></i>
+    </div>
+</div>
     </div>
 </footer>
 

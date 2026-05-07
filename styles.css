@@ -560,6 +560,7 @@ body { background: var(--bg); color: var(--text); transition: 0.3s; }
 }
 
 .footer-cta-box {
+        border-bottom:#000 solid 3px;
     text-align: center;
     padding: 80px 20px;
     background-color: var(--footer-bg);
@@ -569,6 +570,7 @@ body { background: var(--bg); color: var(--text); transition: 0.3s; }
 .serif-h2 { font-family: 'Georgia', serif; font-size: 32px; margin-bottom: 30px; }
 
 .footer-main-links {
+    border:#000 solid 3px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     padding: 60px 40px;
@@ -591,28 +593,151 @@ body { background: var(--bg); color: var(--text); transition: 0.3s; }
     color: var(--text);
 }
 
-.join-now-inline {
+.join-now-inline,.join-black-btn {
     background: var(--text);
     color: var(--bg);
     border: none;
-    padding: 5px 15px;
+    padding: 7px 15px;
     font-weight: bold;
-    font-size: 10px;
+    font:20px;
+    font-size: 12px;
+    border:#000 solid 2px;
     cursor: pointer;
+    border-radius:4px;
+    width:200px;
+}
+input{
+    padding: 7px;
+    margin:10px 0px;
+        border-radius:4px;
+
 }
 
-/* Theme Buttons */
+.join-now-inline:hover,
+.join-black-btn:hover {
+    background: white;
+    color: black;
+    border-radius:4px;
+    border:#000 solid 1px;
+
+
+}
 .footer-bottom {
     display: flex;
-    justify-content: space-between;
-    padding: 20px 40px;
-    font-size: 12px;
+    flex-direction: column; /* Isse buttons text ke niche chale jayenge */
+    align-items: flex-start; /* Isse sb left side hi rahega, bich me nahi aayega */
+    gap: 5px;              /* Text aur buttons ke beech ka gap */
+    padding: 30px 40px;
+    border-top: 30px solid black;
 }
 
-.theme-switcher button {
-    background: none;
-    border: 1px solid var(--border);
-    padding: 5px 15px;
-    cursor: pointer;
-    color: var(--text);
+.theme-switcher {
+    display: flex;
+    gap: 10px; /* Light aur Dark buttons ke beech ka gap */
 }
+.footer-bottom p {
+    margin: 0;
+    font-size: 12px;
+    color: var(--gray-text);
+}
+
+.social-icons{
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+.footer-bottom {
+    position: relative;      /* Icons ko boundary dene ke liye */
+    display: flex;
+    flex-direction: column;  /* Text aur Buttons ko ek ke niche ek karne ke liye */
+    align-items: flex-start; /* Sab left side alignment rahega */
+    padding: 40px;           /* Charo taraf space */
+    border-top: 1px solid var(--border);
+    gap: 15px;               /* Copyright aur buttons ke bich gap */
+}
+
+/* Social icons ko right corner mein bhejne ke liye */
+.align-right-top {
+    position: absolute;      /* Normal flow se bahar nikalne ke liye */
+    top: 40px;               /* Upar se dori (padding ke hisab se) */
+    right: 40px;             /* Right side se dori */
+    display: flex;
+    gap: 20px;               /* Icons ke beech ka gap */
+}
+
+.align-right-top i {
+    font-size: 20px;
+    color: var(--text);      /* Light/Dark mode ke hisab se color change hoga */
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.align-right-top i:hover {
+    opacity: 0.6;            /* Hover karne par halka fade effect */
+}
+
+/* Mobile responsive ke liye (optional) */
+@media (max-width: 600px) {
+    .align-right-top {
+        position: static;    /* Mobile par wapas niche aa jayega taaki screen se bahar na jaye */
+        margin-top: 10px;
+    }
+}
+
+
+.slider-wrapper {
+  width: 100%;
+  overflow: hidden;
+  padding: 40px 0;
+}
+
+#product-list {
+  display: flex;
+  gap: 30px;
+  width: max-content;
+}
+
+.product-card {
+  width: 190px;
+  height: 320px;
+  border-radius: 18px;
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+  transition: all 0.45s cubic-bezier(0.77,0,0.175,1);
+}
+
+.product-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.45s ease;
+}
+
+.product-card.active {
+  height: 410px;
+  transform: translateY(-20px);
+}
+
+.product-card.active img {
+  transform: scale(1.08);
+}
+
+.detail-box {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  color: white;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.product-card.active .detail-box {
+  opacity: 1;
+}
+
+

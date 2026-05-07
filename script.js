@@ -1,75 +1,141 @@
 // Sample data representing what you'd store in Firebase
+
+
 const products = [
-    {
-        title: "Small Leather Gabbi Handbag",
-        brand: "JW PEI",
-        priceRange: "$155 to $320",
-        stores: 2,
-        image: "https://images.unsplash.com/photo-1584917865442-de89df76afd3?q=80&w=500"
-    },
-    {
-        title: "Florence Baroque Pearl Drop",
-        brand: "DEAN DAVIDSON",
-        priceRange: "$104 to $317",
-        stores: 3,
-        image: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=500"
-    },
-    {
-        title: "Monochrome Gg Rectangle",
-        brand: "GUCCI",
-        priceRange: "$280 to $307",
-        stores: 2,
-        image: "https://images.unsplash.com/photo-1572635196237-14b3f281503f?q=80&w=500"
-    },
-    {
-        title: "Knee-high Suede Boots",
-        brand: "VALENTINO GARAVANI",
-        priceRange: "$1574 to $1950",
-        stores: 13,
-        image: "https://images.unsplash.com/photo-1601924921557-45e6ecd0a003?q=80&w=500"
-    }
+  {
+    title: "Leather Handbag",
+    brand: "JW PEI",
+    price: "$155",
+    detail: "Luxury handcrafted finish",
+    image: "https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=500"
+  },
+  {
+    title: "Pearl Drop",
+    brand: "DEAN DAVIDSON",
+    price: "$317",
+    detail: "Elegant premium jewelry",
+    image: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=500"
+  },
+  {
+    title: "Rectangle Shades",
+    brand: "GUCCI",
+    price: "$280",
+    detail: "Luxury designer eyewear",
+    image: "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=500"
+  },
+  {
+    title: "Suede Boots",
+    brand: "VALENTINO",
+    price: "$1574",
+    detail: "Premium winter drop",
+    image: "https://images.unsplash.com/photo-1601924921557-45e6ecd0a003?w=500"
+  },
+  {
+    title: "Leather Handbag",
+    brand: "JW PEI",
+    price: "$155",
+    detail: "Luxury handcrafted finish",
+    image: "https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=500"
+  },
+  {
+    title: "Pearl Drop",
+    brand: "DEAN DAVIDSON",
+    price: "$317",
+    detail: "Elegant premium jewelry",
+    image: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=500"
+  },
+  {
+    title: "Rectangle Shades",
+    brand: "GUCCI",
+    price: "$280",
+    detail: "Luxury designer eyewear",
+    image: "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=500"
+  },
+  {
+    title: "Suede Boots",
+    brand: "VALENTINO",
+    price: "$1574",
+    detail: "Premium winter drop",
+    image: "https://images.unsplash.com/photo-1601924921557-45e6ecd0a003?w=500"
+  }
 ];
+const productList = document.getElementById("product-list");
 
-const productList = document.getElementById('product-list');
+let activeIndex = 1;
+const cardWidth = 220;
 
-function renderProducts() {
-    // Clear existing content
+function render() {
     productList.innerHTML = "";
 
     products.forEach(product => {
-        // 1. Create Element
-        const card = document.createElement('div');
-        card.className = 'product-card';
-        card.style.backgroundImage = `url('${product.image}')`;
+        const card = document.createElement("div");
+        card.className = "product-card";
 
-        // 2. Build Internal HTML
         card.innerHTML = `
-            <div class="overlay">
-                <h4>${product.title}</h4>
-                <p class="brand">${product.brand}</p>
-                <div class="card-footer">
-                    <span><i class="fa-regular fa-folder"></i> Compare ${product.stores} Stores</span>
-                    <span>${product.priceRange}</span>
-                </div>
+            <img src="${product.image}">
+            <div class="detail-box">
+                <h3>${product.title}</h3>
+                <p>${product.brand}</p>
+                <span>${product.price}</span>
+                <small>${product.detail}</small>
             </div>
         `;
 
-        // 3. Append to DOM
         productList.appendChild(card);
     });
 }
 
-// Initialize the render
-document.addEventListener('DOMContentLoaded', () => {
-    renderProducts();
-    
-    // UX Logic: Smooth horizontal scroll with mouse wheel
-    productList.addEventListener('wheel', (evt) => {
-        evt.preventDefault();
-        productList.scrollLeft += evt.deltaY;
-    });
-});
+function focusCard() {
+    const cards = document.querySelectorAll(".product-card");
 
+    cards.forEach(card => card.classList.remove("active"));
+
+    if(cards[1]) {
+        cards[1].classList.add("active");
+    }
+}
+
+function slideNext() {
+
+    productList.style.transition =
+      "transform 0.55s cubic-bezier(.77,0,.175,1)";
+
+    productList.style.transform =
+      `translateX(-${cardWidth}px)`;
+
+    setTimeout(() => {
+
+        productList.appendChild(productList.firstElementChild);
+
+        productList.style.transition = "none";
+        productList.style.transform = "translateX(0)";
+
+        focusCard();
+
+    }, 550);
+}
+
+function startSlider() {
+
+    focusCard();
+
+    setInterval(() => {
+        slideNext();
+    }, 3000);
+}
+document.addEventListener("DOMContentLoaded", () => {
+    render();
+    startSlider();
+
+    renderPartners();
+    renderTestimonials();
+    renderSearchTags();
+    initSlider();
+    renderCategoryGrid();
+    renderIconMenu();
+    startAutoSlide();
+    fetchFirebaseData();
+});
 // Data for the new sections
 const brandLogos = [
     "DOLCE & GABBANA", "JACQUEMUS", "GUCCI", "FRAME", "24S.com", 
@@ -91,17 +157,31 @@ const reviews = [
 
 function renderPartners() {
     const grid = document.getElementById('brand-grid');
-    brandLogos.forEach(name => {
-        const span = document.createElement('span');
-        span.className = "brand-name-placeholder"; // In production, use <img> tags
-        span.style.fontWeight = "900";
-        span.style.fontSize = "18px";
-        span.style.letterSpacing = "2px";
-        span.innerText = name;
-        grid.appendChild(span);
-    });
-}
 
+    grid.innerHTML = `
+        <div class="brand-row top-row">
+            <span>DOLCE&GABBANA</span>
+            <span>JACQUEMUS</span>
+            <span>GUCCI</span>
+            <span>FRAME</span>
+            <span>24S</span>
+            <span>BERGDORF</span>
+            <span>NET-A-PORTER</span>
+            <span>SELFRIDGES</span>
+        </div>
+
+        <div class="center-watermark">24</div>
+
+        <div class="brand-row bottom-row">
+            <span>REVOLVE</span>
+            <span>shopbop</span>
+            <span>MIU MIU</span>
+            <span>VALENTINO</span>
+            <span>OUTNET</span>
+            <span>FARFETCH</span>
+        </div>
+    `;
+}
 function renderTestimonials() {
     const grid = document.getElementById('testimonial-grid');
     reviews.forEach(rev => {
@@ -189,12 +269,17 @@ function initSlider() {
 
 // Add to your initialization
 document.addEventListener('DOMContentLoaded', () => {
-    renderProducts();
+    render();
     renderPartners();
     renderTestimonials();
     renderSearchTags();
     initSlider();
 });
+
+
+
+
+
 const categories = ["WOMEN", "MEN", "KIDS", "BEAUTY", "HOME"];
 const navIcons = [
     { name: "New", img: "https://cdn-icons-png.flaticon.com/512/692/692751.png" },
