@@ -190,7 +190,7 @@ function renderSearchTags() {
     const cloud = document.getElementById("tag-cloud");
 
     const pageLinks = {
-        "Amiri": "index-1.html",
+        "Amiri": "Amiri.html",
         "Jimmy Choo": "dior.html",
         "Gucci": "prada.html",
         "Jewelry Sale": "nike.html",
