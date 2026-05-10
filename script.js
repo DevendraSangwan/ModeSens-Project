@@ -191,7 +191,7 @@ function renderSearchTags() {
 
     const pageLinks = {
         "Amiri": "Amiri.html",
-        "Jimmy Choo": "dior.html",
+        "Jimmy Choo": "choo.html",
         "Gucci": "prada.html",
         "Jewelry Sale": "nike.html",
         "Valentino": "valentino.html"

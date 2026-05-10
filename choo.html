@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ModeSens:Purchase Assistant</title>
+    <link rel="stylesheet" href="choo.css">
+</head>
+<body>
+<header>
+    <h1>MODESENS</h1>
+    <button id="wishlist">♡</button>
+    <hr>
+    <nav id="navbar">
+        <a href="#">ModeSens /</a>
+        <a href="#">Designers /</a>
+        <a href="#">Jimmy Choo</a>
+    </nav>
+</header>
+
+<main>
+    <h2>JIMMY CHOO Women</h2>
+    <button id="favouriteDesinger">♡ FAVOURITE DESIGNER</button>
+</main>
+
+<div id="about">
+<h1 id="h1">
+    JIMMY CHOO
+</h1>
+<p>In the early 1990s Jimmy Choo exploded on to the designer scene crafting elegant shoes catered for royalty and the elite. By 1996 the Jimmy Choo company was born with Mr. Choo's niece Sandra Choi heading design. Now one of the most premier designer luxury accessory brands, shoes are still the focus. Jimmy Choo shoes are designed to be playful and sexy with the utmost itallian craftsmanship. Jimmy Choo shoes and bags can be scene in all sophisticate scenes from the red carpet to state captial halls.</p>
+</div>
+
+<div id="filter">
+    <span>FILTER BY:</span>
+
+    <!-- SALE -->
+    <div class="filter-box">
+        <button class="filter-btn">Sale ▾</button>
+        <div class="dropdown">
+            <select>
+                <option>No Min</option>
+                <option>10% Off</option>
+                <option>20% Off</option>
+                <option>30% Off</option>
+                <option>40% Off</option>
+                <option>50% Off</option>
+                <option>60% Off</option>
+                <option>70% Off</option>
+                <option>80% Off</option>
+                <option>90% Off</option>
+            </select>
+            <span>to</span>
+            <select>
+                <option>No Max</option>
+                <option>10% Off</option>
+                <option>20% Off</option>
+                <option>30% Off</option>
+                <option>40% Off</option>
+                <option>50% Off</option>
+                <option>60% Off</option>
+                <option>70% Off</option>
+                <option>80% Off</option>
+                <option>90% Off</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- CATEGORY -->
+    <div class="filter-box">
+    <button class="filter-btn">Category ▾</button>
+
+    <div class="dropdown category-dropdown">
+        <div class="category-item">Clothing</div>
+        <div class="category-item">Shoes</div>
+        <div class="category-item">Bags</div>
+        <div class="category-item">Accessories</div>
+        <div class="category-item">Beauty</div>
+        <div class="category-item">Home</div>
+    </div>
+</div>
+
+<button class="filter-btn">JIMMY CHOO</button>
+
+    <!-- PRICE RANGE (NEW - LIKE IMAGE) -->
+    <div class="filter-box">
+        <button class="filter-btn">Price Range ▾</button>
+
+        <div class="dropdown price-dropdown">
+
+            <div class="price-inputs">
+                <input type="number" placeholder="No Min">
+                <span>to</span>
+                <input type="number" placeholder="No Max">
+            </div>
+
+            <input type="range" min="0" max="10000">
+
+            <div class="extra">
+                <label><input type="checkbox"> Free Shipping</label>
+                <label><input type="checkbox"> Free Duty</label>
+            </div>
+
+        </div>
+    </div>
+<button class="Save-btn">SAVE SEARCH</button>
+</div>
+
+<div id="info">
+    <p class="info">Gender: Women</p>
+    <p class="X">x</p>
+    <p class="info">Condition: New</p>
+    <p class="X">x</p>
+    <p class="info">Designer: JIMMY CHOO</p>
+    <p class="X">x</p>
+    <div id="additional">
+    <button id="reset" class="additional">RESET</button>
+    <button id="saveSearch" class="additional"><img src="https://cdn-icons-png.flaticon.com/128/9511/9511721.png" alt="save" height="15"></button>
+    <button id="share" class="additional"><img src="https://cdn-icons-png.flaticon.com/128/1828/1828959.png" alt="share" height="15"></button>
+    </div>
+</div>
+
+<div class="container">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <button class="bestSeller">Best Sellers ▾</button>
+
+         <div class="sidebar-item" >
+
+            <select id="genderFilter"class="filter">
+
+                <option value="all">GENDER</option>
+
+                <option value="men">Men</option>
+
+                <option value="women">Women</option>
+
+            </select>
+
+        </div>
+
+       <div class="sidebar-item">
+
+            <select id="colorFilter" class="filter">
+
+                <option value="all">COLOR</option>
+
+                <option value="black">Black</option>
+
+                <option value="gold">Gold</option>
+
+                <option value="white">White</option>
+
+                <option value="red">Red</option>
+
+            </select>
+</div>
+
+           <div class="sidebar-item">
+
+            <select id="materialFilter" class="filter">
+
+                <option value="all">MATERIAL</option>
+
+                <option value="leather">Leather</option>
+
+                <option value="satin">Satin</option>
+
+            </select>
+
+        </div>
+
+
+        <section class="more-section">
+
+    <!-- LEFT LINKS -->
+    <div class="more-links">
+
+        <h3>More From Jimmy Choo</h3>
+
+        <a href="#">Jimmy Choo Women Clothing</a>
+        <a href="#">Jimmy Choo Women Shoes</a>
+        <a href="#">Jimmy Choo Women Bags</a>
+        <a href="#">Jimmy Choo Women Accessories</a>
+        <a href="#">Jimmy Choo Women Sale</a>
+        <a href="#">Jimmy Choo Men</a>
+        <a href="#">Jimmy Choo Kids</a>
+
+        <h3>Related Searches</h3>
+
+        <a href="#">Kenzo Women</a>
+        <a href="#">Lanvin Women</a>
+        <a href="#">Maison Margiela Women</a>
+        <a href="#">Marc Jacobs Women</a>
+        <a href="#">Louis Vuitton Women</a>
+
+    </div>
+
+    </aside>
+
+    <!-- PRODUCT SECTION -->
+    <section class="products">
+
+        <!-- CARD 1 -->
+        <div class="card">
+
+            <p class="tag">PRICE DROP</p>
+
+            <button class="heart"><img src="https://cdn-icons-png.flaticon.com/128/2077/2077422.png" alt="heart"></button>
+
+            <img src="https://cdn.modesens.com/availability/jimmy-choo-medium-cinch-leather-shoulder-bag-latte-97990082?w=400" alt="shoe">
+
+            <h3>Jimmy Choo</h3>
+
+            <p class="brand">Medium Chich Leather Shoulder Bag in Latte</p>
+
+            <div class="price-box">
+                <span class="price">₹169851 to ₹200199</span>
+            </div>
+            <a href="#">Compare 5 Stores</a>
+        </div>
+        
+        <!-- CARD 2-->
+        <div class="card">
+
+            <p class="tag">PRICE DROP</p>
+
+            <button class="heart"><img src="https://cdn-icons-png.flaticon.com/128/2077/2077422.png" alt="heart"></button>
+
+            <img src="https://cdn.modesens.com/availability/jimmy-choo-ayla-metallic-leather-sandals-gold-87087791?w=400" alt="shoe">
+
+            <h3>Jimmy Choo</h3>
+
+            <p class="brand">Ayla flat Open Square Toe Metallic in Gold</p>
+
+            <div class="price-box">
+                <span class="price">₹169851 to ₹200199</span>
+
+            </div>
+            <a href="#">Compare 2 Stores</a>
+        </div>
+
+        <!-- CARD 3 -->
+         <div class="card">
+
+            <p class="tag">TRENDING</p>
+
+            <button class="heart"><img src="https://cdn-icons-png.flaticon.com/128/2077/2077422.png" alt="heart"></button>
+
+            <img src="https://cdn.modesens.com/availability/jimmy-choo-50mm-mimmi-flower-sling-back-pumps-white-114313902?w=400" alt="shoe">
+
+            <h3>JIMMY CHOO</h3>
+
+            <p class="brand">Latte Siny Nappa Leather Slingback With Lace Corsage in Multi </p>
+
+            <div class="price-box">
+                 <span class="price">₹169851 to ₹200199</span>
+            </div>
+            <a href="#">Compare 8 Stores</a>
+        </div>
+
+        <!-- CARD 4 -->
+         <div class="card">
+
+            <p class="tag">PRICE DROP</p>
+
+            <button class="heart"><img src="https://cdn-icons-png.flaticon.com/128/2077/2077422.png" alt="heart"></button>
+
+            <img src="https://cdn.modesens.com/availability/jimmy-choo-lula-red-heeled-sandals-with-crystal-straps-and-shaped-bows-in-satin-woman-pink-115979203?w=400" alt="shoe">
+
+            <h3>JIMMY CHOO</h3>
+
+            <p class="brand">Lula Red Heeled Sandals With Crystal And Shaped Bows in Satin woman In Pink</p>
+
+            <div class="price-box">
+                <span class="price">₹169851 to ₹200199</span>
+            </div>
+            <a href="#">Compare 8 Stores</a>
+        </div>
+        
+
+        <!-- card 5 -->
+         <div class="card">
+
+            <p class="tag">TRENDING</p>
+
+            <button class="heart"><img src="https://cdn-icons-png.flaticon.com/128/2077/2077422.png" alt="heart"></button>
+
+            <img src="https://cdn.modesens.com/availability/jimmy-choo-buckle-strap-biker-boots-black-116444454?w=400" alt="shoe">
+
+            <h3>JIMMY CHOO</h3>
+
+            <p class="brand">Biker Rain Tpu Boots Black 42 In Multi</p>
+
+            <div class="price-box">
+                <span class="price">₹169851 to ₹200199</span>
+            </div>
+            <a href="#">Compare 9 Stores</a>
+        </div>
+
+        <!-- ad part -->
+        <div class="product-box ad-box">
+
+            <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=700&auto=format&fit=crop">
+
+            <div class="ad-content">
+
+                <h1>Nugnes</h1>
+
+                <p>
+                    Enjoy 15% off when you sign up to newsletter.
+                </p>
+
+                <button>Shop Now</button>
+
+            </div>
+
+        </div>
+
+
+        <!-- CARD 6 -->
+        <div class="card">
+
+            <p class="tag">TRENDING</p>
+
+            <button class="heart"><img src="https://cdn-icons-png.flaticon.com/128/2077/2077422.png" alt="heart"></button>
+
+            <img src="https://cdn.modesens.com/availability/jimmy-choo-65mm-elsy-sandals-107130685?w=400" alt="shoe">
+
+            <h3>JIMMY CHOO</h3>
+
+            <p class="brand">Midnight Blue Elsy 70 Sandals in Black</p>
+
+            <div class="price-box">
+                <span class="price">₹169851 to ₹200199</span>
+            </div>
+            <a href="#">Compare 7 Stores</a>
+        </div>
+
+        <!-- CARD 7 -->
+        <div class="card">
+
+            <p class="tag">TRENDING</p>
+
+            <button class="heart"><img src="https://cdn-icons-png.flaticon.com/128/2077/2077422.png" alt="heart"></button>
+
+            <img src="https://cdn.modesens.com/availability/jimmy-choo-100mm-lula-crystal-embellished-bow-sandals-silver-114156350?w=400" alt="shoe">
+
+            <h3>JIMMY CHOO</h3>
+
+            <p class="brand">100mm Lula Metallic Leather Sandals With Crystal Bows in White</p>
+
+            <div class="price-box">
+                 <span class="price">₹169851 to ₹200199</span>
+
+            </div>
+
+            <a href="#">Compare 7 stores</a>
+        </div>
+
+        <!-- CARD 8 -->
+        <div class="card">
+
+            <p class="tag">TRENDING</p>
+
+            <button class="heart"><img src="https://cdn-icons-png.flaticon.com/128/2077/2077422.png" alt="heart"></button>
+            <img src="https://cdn.modesens.com/availability/jimmy-choo-elsy-70-satin-mid-heel-sandals-slingback-118335458?w=400" alt="">
+            <h3>White Party Heel</h3>
+
+            <p class="brand">JIMMY CHOO</p>
+
+            <div class="price-box">
+                <span class="price">₹169851 to ₹200199</span>
+            </div>
+
+            <a href="#">Compare 7 stores</a>
+
+        </div>
+
+        <!-- card 9 -->
+         <div class="card">
+
+            <p class="tag">TRENDING</p>
+
+            <button class="heart"><img src="https://cdn-icons-png.flaticon.com/128/2077/2077422.png" alt="heart"></button>
+            <img src="https://cdn.modesens.com/availability/jimmy-choo-black-leo-100-heeled-sandals-116212620?w=400" alt="">
+            <h3>White Party Heel</h3>
+
+            <p class="brand">JIMMY CHOO</p>
+
+            <div class="price-box">
+                <span class="price">₹169851 to ₹200199</span>
+            </div>
+
+            <a href="#">Compare 7 stores</a>
+
+        </div>
+
+    </section>
+
+</div>
+
+
+    <script src="choo.js"></script>
+</body>
+</html>
