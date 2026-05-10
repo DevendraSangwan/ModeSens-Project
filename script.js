@@ -193,8 +193,7 @@ function renderSearchTags() {
         "Amiri": "Amiri.html",
         "Jimmy Choo": "choo.html",
         "Gucci": "prada.html",
-        "Jewelry Sale": "nike.html",
-        "Valentino": "valentino.html"
+        "Jewelry Sale": "./swati/jwelery.html",
     };
 
     cloud.innerHTML = "";

@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Jewelry Store</title>
+  <link rel="stylesheet" href="jwelery.css">
+</head>
+<body>
+  <header>
+    <h2> &#9776 MODESENS</h2>
+    <P>Shop designer jewelry sale from 950+ stores. Compare prices, discover new arrivals, and get the best deals on
+      designer jewelry sale —all in one place.</P>
+    <select id="sort">
+      <option value="">Sort</option>
+      <option value="low">Price Low to High</option>
+      <option value="high">Price High to Low</option>
+    </select>
+
+    <select onchange="filterCategory(this.value)">
+      <option value="all">All</option>
+      <option value="women">Women</option>
+      <option value="men">Men</option>
+      <option value="kids">Kids</option>
+    </select>
+ </header>
+
+  <div class="main" style="display: flex; gap: 20px;">
+    <div class="sidebar">
+
+      <p class="back">&lt; Back</p>
+
+      <div class="section">
+        <h3>GENDER ⌄</h3>
+      </div>
+<!-- ======================SECTION======================== -->
+      <div class="section">
+        <h4>Related Categories</h4>
+        <ul>
+          <li>Women Clothing</li>
+          <li>Women Shoes</li>
+          <li>Women Bags</li>
+          <li>Women Accessories</li>
+          <li>Women Beauty</li>
+          <li>Women Sale</li>
+          <li>Men</li>
+          <li>Kids</li>
+          <li>Pre-Owned Women</li>
+        </ul>
+      </div>
+
+      <hr>
+
+      <div class="section">
+        <h4>Related Searches</h4>
+        <ul>
+          <li>Gucci Women</li>
+          <li>Fendi Women</li>
+          <li>Givenchy Women</li>
+          <li>Burberry Women</li>
+          <li>Saint Laurent Women</li>
+          <li>Off-White Women</li>
+          <li>Balenciaga Women</li>
+          <li>Versace Women</li>
+          <li>Valentino Women</li>
+          <li>Dolce & Gabbana Women</li>
+        </ul>
+      </div>
+   
+      <hr>
+      
+      <button class="save">SAVE</button>
+
+    </div>
+
+    <div class="container">
+      <!-- ================PRODUCT IMAGES================================ -->
+
+      <div class="card" data-category="women">
+        <img src="a.jpg">
+        <h2>Aurora Diamond Ring</h2>
+        <p class="Price">$1,200</p>
+        <span class="heart">♡</span>
+      </div>
+
+      <div class="card" data-category="women">
+        <img src="b.jpg">
+        <h2> Blossom Luxe Ring</h2>
+        <p class="Price">$70000</p>
+        <span class="heart">♡</span>
+      </div>
+
+      <div class="card" data-category="women">
+        <img src="c.jpg">
+        <h2>Emerald Swan Necklace</h2>
+        <p class="Price">$12,000</p>
+        <span class="heart">♡</span>
+      </div>
+
+      <div class="card" data-category="kids">
+        <img src="tiyara.jpg">
+        <h2>Royal Crystal Tiara</h2>
+        <p class="Price">$2,00,000</p>
+        <span class="heart">♡</span>
+      </div>
+       
+      <div class="card" data-category="women">
+        <img src="d.jpg">
+        <h2>Celeste Diamond Set</h2>
+        <p class="Price">$50,000</p>
+        <span class="heart">♡</span>
+      </div>
+
+      <div class="card" data-category="women">
+        <img src="box.jpg">
+        <h2>Silver Star Pendant</h2>
+        <p class="Price">$18,500</p>
+        <span class="heart">♡</span>
+      </div>
+
+      <div class="card" data-category="kids">
+        <img src="band.jpg">
+        <h2>Princess Flora Crown</h2>
+        <p class="Price">$95,000</p>
+        <span class="heart">♡</span>
+      </div>
+
+      <div class="card" data-category="women">
+        <img src="f.jpg">
+        <h2>Emerald Royale Necklace</h2>
+        <p class="Price">$1,50,000</p>
+        <span class="heart">♡</span>
+      </div>
+
+      <div class="card" data-category="men">
+        <img src="image.jpeg">
+        <h2>Diamond Luxe Watch</h2>
+        <p class="Price">$2,25,000</p>
+        <span class="heart">♡</span>
+      </div>
+
+      <div class="card" data-category="kids">
+        <img src="kids.jpg">
+        <h2>Midnight Charm Bracelet</h2>
+        <p class="Price">$48,000</p>
+        <span class="heart">♡</span>
+      </div>
+
+      <div class="card" data-category="kids">
+        <img src="kids1.jpg">
+        <h2>Golden  Kids Bracelet</h2>
+        <p class="Price">$32,000</p>
+        <span class="heart">♡</span>
+      </div>
+
+      <div class="card" data-category="women">
+        <img src="h.jpg">
+        <h2>Pearl Elegance Earrings</h2>
+        <p class="Price">$1,18,000</p>
+        <span class="heart">♡</span>
+      </div>
+
+      <div class="card" data-category="kids">
+        <img src="kids2.jpg">
+        <h2> Blossom Jewelry Set</h2>
+        <p class="Price">$74,000</p>
+        <span class="heart">♡</span>
+      </div>
+
+      <div class="card" data-category="kids">
+        <img src="kids3.jpg">
+        <h2>Silver Harmony Hoops</h2>
+        <p class="Price">$56,000</p>
+        <span class="heart">♡</span>
+      </div>
+
+      <div class="card" data-category="women">
+        <img src="butterfly.jpg">
+        <h2>Butterfly Grace Earrings</h2>
+        <p class="Price">$89,000</p>
+        <span class="heart">♡</span>
+      </div>
+
+      <div class="card" data-category="kids">
+        <img src="kids4.jpg">
+        <h2>Royal Bracelet</h2>
+        <p class="Price">$67,000</p>
+        <span class="heart">♡</span>
+      </div>
+
+      <div class="card" data-category="women">
+        <img src="circle.jpg">
+        <h2>Crystal Aura Earrings</h2>
+        <p class="Price">$92,000</p>
+        <span class="heart">♡</span>
+      </div>
+
+      <div class="card"data-category="women">
+        <img src="earings.jpeg">
+        <h2> Cascade Earrings</h2>
+        <p class="Price">$1,35,000</p>
+        <span class="heart">♡</span>
+      </div>
+
+      <div class="card" data-category="kids">
+        <img src="kids6.jpg">
+        <h2>Golden Baby Bracelet</h2>
+        <p class="Price">$41,000</p>
+        <span class="heart">♡</span>
+      </div>
+
+      <div class="card" data-category="women">
+        <img src="flower.jpg">
+        <h2> Sparkle Earrings</h2>
+         <p class="Price">$86,000</p>
+        <span class="heart">♡</span>
+      </div>
+
+      <div class="card">
+        <img src="goldd.jpg">
+        <h2>Royal Gold Hoop Earrings</h2>
+        <p class="Price">$58,000</p>
+        <span class="heart">♡</span>
+      </div>
+
+      <div class="card" data-category="Kids">
+        <img src="heart.jpg">
+        <h2>Gold Hoop ring</h2>
+        <span class="heart">♡</span>
+      </div>
+
+      <div class="card">
+        <img src="braslate_.jpg">
+        <h2> Trendy Gold-Plated</h2>
+        <p class="Price">$47,000</p>
+        <span class="heart">♡</span>
+      </div>
+
+      <div class="card" data-category="women">
+        <img src="neckles.jpg">
+        <h2> Dazzling Ember Diamond</h2>
+        <span class="heart">♡</span>
+      </div>
+
+      <div class="card" data-category="women">
+        <img src="PENDON.JPG">
+        <h2>Designer Chain Necklace</h2>
+        <p class="Price">$2,10,000</p>
+        <span class="heart">♡</span>
+      </div>
+
+      <div class="card">
+        <img src="ringg.jpg">
+        <h2>Luxury Stone Ring</h2>
+        <p class="Price">$2,10,000</p>
+        <span class="heart">♡</span>
+      </div>
+
+      <div class="card">
+        <img src="SIF.jpg">
+        <h2>Round Hoop</h2>
+        <p class="Price">$52,000</p>
+        <span class="heart">♡</span>
+      </div>
+
+      <div class="card">
+        <img src="WATCH.jpg">
+        <h2>Finest Women's Watch</h2>
+        <p class="Price">$2,40,000</p>
+        <span class="heart">♡</span>
+      </div>
+
+      <div class="card" data-category="Men">
+        <img src="men.jpg">
+        <h2>Fashionable Band</h2>
+        <p class="Price">$68,000</p>
+        <span class="heart">♡</span>
+      </div>
+
+
+      <div class="card" data-category="women">
+        <img src="x.jpg">
+        <h2>Ladies Handbags</h2>
+        <p class="Price">$1,15,000</p>
+        <span class="heart">♡</span>
+      </div>
+
+      <div class="card" data-category="women">
+        <img src="Z.jpg">
+        <h2>Modern Chain</h2>
+        <p class="Price">$94,000</p>
+        <span class="heart">♡</span>
+      </div>
+
+      <div class="card" data-category="Men">
+        <img src="black.jpg">
+        <h2>Black Bracelet</h2>
+        <p class="Price">$49,000</p>
+        <span class="heart">♡</span>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ============================FOOTER============================ -->
+  <hr>
+  <footer class="footer">
+    <div class="footer-container">
+
+      <!-- Column 1 -->
+      <div class="footer-col">
+        <h4>CUSTOMER CARE</h4>
+        <ul>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Shipping</a></li>
+          <li><a href="#">Returns</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 2 -->
+      <div class="footer-col">
+        <h4>INFORMATION</h4>
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Affiliates</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3 -->
+      <div class="footer-col">
+        <h4>LEGAL</h4>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4 -->
+      <div class="footer-col">
+        <h4>INTERNATIONAL</h4>
+        <ul>
+          <li><a href="#">United States</a></li>
+          <li><a href="#">UK</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 5 (Newsletter) -->
+      <div class="footer-col newsletter">
+        <h4>REFER A FRIEND</h4>
+        <p>Share shopping’s best-kept secret with your favorite people.</p>
+        <input type="email" placeholder="Email Address" id="emailInput">
+        <button onclick="referFriend()">REFER A FRIEND</button>
+      </div>
+
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom">
+      <p>© 2026, YourStore Inc</p>
+
+      <div class="theme-toggle">
+        <button onclick="setTheme('light')"> ☀️ Light</button>
+        <button onclick="setTheme('dark')"> 🌙 Dark</button>
+      </div>
+    </div>
+  </footer>
+
+  <script src="jwelery.js"></script>
+
+</body>
+</html>
