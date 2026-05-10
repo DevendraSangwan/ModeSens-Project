@@ -7,6 +7,7 @@ headings.forEach(function(heading){
         const content = this.nextElementSibling;
 
         if(content.style.display === "block"){
+
             content.style.display = "none";
         }
 
@@ -50,3 +51,87 @@ hearts.forEach(function(heart){
 
 });
 
+// PRODUCTS
+
+const products = document.querySelectorAll(".img_box");
+
+
+
+// gender
+
+const genderFilters = document.querySelectorAll(".gender_filter");
+
+genderFilters.forEach(function(filter){
+
+    filter.addEventListener("click", function(){
+
+        const selectedGender = this.dataset.gender;
+
+        products.forEach(function(product){
+
+            if(product.dataset.gender === selectedGender){
+
+                product.style.display = "block";
+            }
+
+            else{
+
+                product.style.display = "none";
+            }
+
+        });
+
+    });
+
+});
+
+// PRODUCTS
+
+
+
+
+// COLOR FILTER
+
+const colorFilters = document.querySelectorAll(".color_filter");
+
+colorFilters.forEach(function(filter){
+
+    filter.addEventListener("click", function(){
+
+        const selectedColor = this.dataset.color;
+
+        products.forEach(function(product){
+
+            if(product.dataset.color === selectedColor){
+
+                product.style.display = "";
+
+            }
+
+            else{
+
+                product.style.display = "none";
+
+            }
+
+        });
+
+    });
+
+});
+
+
+
+
+//mode
+function setTheme(mode){
+
+    if(mode === "dark"){
+        document.body.classList.add("dark");
+    }
+
+    else{
+        document.body.classList.remove("dark");
+    }
+
+}

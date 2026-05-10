@@ -13,7 +13,7 @@
     <nav>
 
         <p class="navpara">Quiet Luxury Edit
-        <a href="#">Shop by Brands</a>
+        <a href="https://www.instagram.com/amiri/">Shop by Brands</a>
      </p>  
 
     </nav>
@@ -66,6 +66,12 @@
 
     <select class="filter_select">
         <option>Sale</option>
+        <option>Up to 20% off</option>
+        <option>Up to 30% off</option>
+        <option>Up to 40% off</option>
+        <option>Up to 70% off</option>
+        <option>Up to 80% off</option>
+
     </select>
 
 
@@ -95,6 +101,12 @@
 
     <select class="filter_select">
         <option>Price Range</option>
+        <option>Price Range</option>
+        <option value="0-500">Under ₹500</option>
+        <option value="500-1000">₹500 - ₹1000</option>
+        <option value="1000-3000">₹1000 - ₹3000</option>
+        <option value="3000-5000">₹3000 - ₹5000</option>
+        <option value="5000+">₹5000+</option>
     </select>
 
 </div>
@@ -113,9 +125,14 @@
 
         <div class="filter_content">
 
-            <p>Women</p>
+            <!-- <p>Women</p>
             <p>Men</p>
-            <p>Kids</p>
+            <p>Kids</p> -->
+            <p class="gender_filter" data-gender="women">Women</p>
+
+<p class="gender_filter" data-gender="men">Men</p>
+
+<p class="gender_filter" data-gender="kids">Kids</p>
 
         </div>
         </div>
@@ -130,9 +147,18 @@
 
              <div class="filter_content">
 
-            <p>Black</p>
-            <p>White</p>
-            <p>Blue</p>
+            <p class="color_filter" data-color="black">Black</p>
+
+            <p class="color_filter" data-color="white">White</p>
+
+            <p class="color_filter" data-color="blue">Blue</p>
+
+            <p class="color_filter" data-color="pink">Pink</p>
+
+            <p class="color_filter" data-color="silver">Silver</p>
+
+            <p class="color_filter" data-color="red">Red</p>
+
 
         </div>
             </div>
@@ -186,7 +212,10 @@
          
         <div class="main_container">
 
-    <div class="img_box">
+    <div class="img_box"
+         data-gender="women"
+         data-color="red">
+
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROs5xFj1GM3t4JrykcknWK5y_ohrJI_h_8fQ&s" alt="Cherry Keychain">
          <span class="heart1">&#9825;</span>
 
@@ -199,7 +228,10 @@
 
        
     </div>
-    <div class="img_box">
+    <div class="img_box"
+         data-gender="women"
+         data-color="blue">
+
         <img src="https://littleboxindia.com/cdn/shop/files/Collared_V_Neck_Striped_Sleeveless_Top_in_Blue_and_White.webp?v=1769842689" alt="Crystal Earrings">
          <span class="heart1">&#9825;</span>
 
@@ -212,7 +244,10 @@
 
     </div>
 
-    <div class="img_box">
+    <div class="img_box"
+         data-gender="women"
+         data-color="black">
+         
         <img src="https://www.mytheresa.com/image/332/376/100/d5/P00762207.jpg" alt="Slingback Pumps">
          <span class="heart1">&#9825;</span>
 
@@ -224,7 +259,10 @@
 
     </div>
 
-    <div class="img_box">
+    <div class="img_box"
+         data-gender="women"
+         data-color="black">
+
         <img src="https://cdna.lystit.com/300/375/tr/photos/luosophy/b800fb7c/chloe--Chloa-Paddington-Shoulder-Bag-With-Oversized-Padlock-And-C-Shaped-Buckles.jpeg" alt="">
          <span class="heart1">&#9825;</span>
 
@@ -240,7 +278,10 @@
 </div>
 
 
-<div class="main_container2">
+<div class="main_container2"
+     data-gender="women"
+     data-color="white">
+
     <div class="img_box">
         <img src="https://m.media-amazon.com/images/I/816oFmBKjgL._AC_UY1000_.jpg" alt="">
          <span class="heart1">&#9825;</span>
@@ -253,12 +294,16 @@
 
     </div>
 
-    <div class="img_box">
+    <div class="img_box"
+         data-gender="women"
+         data-color="white">
+
         <img src="https://i.pinimg.com/736x/7e/b9/56/7eb95612792d050a5b003586844e36a4.jpg" alt="">
          <span class="heart1">&#9825;</span>
 
           <!-- product info -->
-          <div class="product_info">
+          <div class="product_info"
+               data-gender="women">
         <h4>Elegant Stain Gown</h4>
         <p>$2,950</p>
     </div>
@@ -266,7 +311,10 @@
 
     </div>
 
-    <div class="img_box">
+    <div class="img_box"
+         data-gender="women"
+         data-color="silver">
+
         <img src="https://m.media-amazon.com/images/I/71nN5jWKtaL._AC_UY900_.jpg" alt="">
          <span class="heart1">&#9825;</span>
 
@@ -280,11 +328,14 @@
     </div>
 
     <div class="img_box">
+
         <img src="https://sunglassworlz.in/cdn/shop/files/chasmawala07-20230513-0026.jpg?v=1733555536" alt="">
          <span class="heart1">&#9825;</span>
 
           <!-- product info -->
-          <div class="product_info">
+          <div class="product_info"
+               data-color="black">
+
         <h4>Ray Black Sunglasses</h4>
         <p>$320</p>
     </div>
@@ -292,7 +343,10 @@
     </div>
     </div>
 
-    <div class="main_container3">
+    <div class="main_container3"
+         data-gender="kids"
+         data-color="white">
+
         <div class="img_box">
             <img src="https://image.hm.com/assets/hm/0c/d1/0cd11f174c5ef6ba47165814c76ba50a42c90b1c.jpg?imwidth=1260" alt="">
             <span class="heart1">&#9825;</span>
@@ -306,7 +360,10 @@
 
         </div>
 
-        <div class="img_box">
+        <div class="img_box"
+             data-gender="kids"
+             data-color="white">
+
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTahLPi9new7GdJ2c7-bC_ths7aFDbCZ439cg&s" alt="">
             <span class="heart1">&#9825;</span>
 
@@ -319,7 +376,10 @@
 
         </div>
 
-        <div class="img_box">
+        <div class="img_box"
+             data-gender="kids"
+             data-color="pink">
+
             <img src="https://tiimg.tistatic.com/fp/1/008/587/comfortable-kids-boys-suits-for-party-wear-004.jpg" alt="">
             <span class="heart1">&#9825;</span>
 
@@ -331,7 +391,10 @@
 
         </div>
 
-        <div class="img_box">
+        <div class="img_box"
+             data-gender="kids"
+             data-color="pink">
+
             <img src="https://www.fayonkids.com/cdn/shop/files/manufactured-by-fayon-kids-noida-u-p-baby-pink-embroidered-top-with-plazzo-pant-40923371045120.jpg?v=1756713861&width=533" alt="">
             <span class="heart1">&#9825;</span>
 
@@ -344,7 +407,11 @@
         </div>
         </div>
 
-        <div class="main_container4">
+        <div class="main_container4"
+             data-gender="men"
+             data-color="black"
+             data-color="white">
+
             <div class="img_box">
                 <img src="https://rukminim2.flixcart.com/image/909/909/xif0q/shirt/l/t/t/-original-imahjytwxbcfjtfx.jpeg?q=90" alt="">
                 <span class="heart1">&#9825;</span>
@@ -358,7 +425,10 @@
 
             </div>
 
-            <div class="img_box">
+            <div class="img_box"
+                 data-gender="men"
+                 data-color="white">
+
                 <img src="https://campussutra.com/cdn/shop/files/CSMSSTR6054_1-3005_625e0dcb-b909-4343-b082-71911128392a.webp?v=1756725578" alt="">
                  <span class="heart1">&#9825;</span>
 
@@ -372,28 +442,35 @@
 
             </div>
 
-            <div class="img_box">
+            <div class="img_box"
+                 data-gender="men"
+                 data-color="black">
+
                 <img src="https://rukminim2.flixcart.com/image/480/640/xif0q/shopsy-watch/4/a/c/1-dyn151-styl-led-oval-watch-khanderaya-boys-girls-original-imahfdd7g7nywmxg.jpeg?q=90" alt="">
                  <span class="heart1">&#9825;</span>
 
                   <!-- product info -->
           <div class="product_info">
-            <h4>Midnight LED Watch</h4>
-    <p>$2,850</p>
+            <h4>Midnight LEB Watch</h4>
+            <p>4,780</p>
+            
         
     </div>
 
             </div>
 
-            <div class="img_box">
+            <div class="img_box"
+                 data-gender="men"
+                 data-color="black">
+
                 <img src="https://www.solepairs.com/cdn/shop/products/NEG0016-675x850.jpg?v=1667184530" alt="">
                 <span class="heart1">&#9825;</span>
 
                  <!-- product info -->
           <div class="product_info">
-             <h4>Italian Leather Oxfords</h4>
-    <p>$3,420</p>
-        
+            <h4>Italian Leather Oxfords</h4>
+            <p>5,300</p>
+       
     </div>
 
             </div>
