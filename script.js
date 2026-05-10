@@ -180,20 +180,22 @@ function startTestimonialSlider() {
     }, 3000);
 }
 // ================= SEARCH TAGS =================
-// ================= SEARCH TAGS =================
 const searchTags = [
-    "Jewelry Sale","Gucci","Valentino","Nike","Dior",
-    "Chanel","Prada","Balenciaga","Saint Laurent",
+    "Jewelry Sale","Gucci","Jimmy Choo","Amiri","Valentino","Nike","Dior",
+    "Chanel","Balenciaga","Saint Laurent",
     "Fendi","Burberry","Moncler"
 ];
 
 function renderSearchTags() {
     const cloud = document.getElementById("tag-cloud");
 
-    if (!cloud) {
-        console.error("tag-cloud not found");
-        return;
-    }
+    const pageLinks = {
+        "Amiri": "index-1.html",
+        "Jimmy Choo": "dior.html",
+        "Gucci": "prada.html",
+        "Jewelry Sale": "nike.html",
+        "Valentino": "valentino.html"
+    };
 
     cloud.innerHTML = "";
 
@@ -203,11 +205,16 @@ function renderSearchTags() {
         tag.textContent = tagName;
 
         tag.addEventListener("click", function () {
+
             document.querySelectorAll(".tag").forEach(t => {
                 t.classList.remove("active");
             });
 
             this.classList.add("active");
+
+            if(pageLinks[tagName]){
+                window.location.href = pageLinks[tagName];
+            }
         });
 
         cloud.appendChild(tag);
@@ -372,3 +379,54 @@ document.addEventListener("DOMContentLoaded", () => {
     fetchFirebaseData();
 
 });
+
+const joinButtons = document.querySelectorAll(
+    ".join-btn-top, .join-now-inline, .btn-white-cta, .join-black-btn"
+);
+
+const modal = document.getElementById("signup-modal");
+const closeModal = document.getElementById("close-modal");
+const signupSubmit = document.getElementById("signup-submit");
+
+joinButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        modal.classList.remove("hidden");
+    });
+});
+
+closeModal.addEventListener("click", () => {
+    modal.classList.add("hidden");
+});
+
+signupSubmit.addEventListener("click", () => {
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    if(name && email && password){
+        const user = { name, email };
+
+        localStorage.setItem("modesensUser", JSON.stringify(user));
+
+        alert(`Welcome ${name}!`);
+        modal.classList.add("hidden");
+
+        joinButtons.forEach(btn => {
+            btn.textContent = `Hi, ${name}`;
+        });
+    } else {
+        alert("Fill all fields");
+    }
+});
+function handleJoinedState() {
+    const preLogin = document.getElementById("pre-login-content");
+
+    if(preLogin){
+        preLogin.classList.add("hidden-section");
+    }
+
+    window.scrollTo({
+        top: document.querySelector(".search-trending-container").offsetTop,
+        behavior: "smooth"
+    });
+}
