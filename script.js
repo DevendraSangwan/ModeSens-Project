@@ -181,7 +181,7 @@ function startTestimonialSlider() {
 }
 // ================= SEARCH TAGS =================
 const searchTags = [
-    "Jewelry Sale","Gucci","Jimmy Choo","Amiri","Valentino","Nike","Dior",
+    "Jewelry Sale","Dress","Jimmy Choo","Amiri","Valentino","Nike","Dior",
     "Chanel","Balenciaga","Saint Laurent",
     "Fendi","Burberry","Moncler"
 ];
@@ -191,8 +191,8 @@ function renderSearchTags() {
 
     const pageLinks = {
         "Amiri": "Amiri.html",
-        "Jimmy Choo": "choo.html",
-        "Gucci": "prada.html",
+        "Jimmy Choo": "./kajal/choo.html",
+        "Dress": "./aditi/dress.html",
         "Jewelry Sale": "./swati/jwelery.html",
     };
 

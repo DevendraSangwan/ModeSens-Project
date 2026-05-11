@@ -473,34 +473,160 @@ main button:hover{
     cursor: pointer;
 }
 
+.footer-cta {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: #f9f9f9;
+}
 
-.footer{
-    background: #111;
-    color: white;
-    padding: 50px;
-    display: flex;
-    justify-content: space-around;
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 60px 40px;
+    font-size: 11px;
+}
+
+.footer-links h4 { margin-bottom: 15px; font-size: 12px; }
+/* Theme Colors */
+:root {
+    --bg: #ffffff;
+    --text: #000000;
+    --border: #eeeeee;
+    --footer-bg: #f8f8f8;
+}
+
+[data-theme="dark"] {
+    --bg: #121212;
+    --text: #ffffff;
+    --border: #333333;
+    --footer-bg: #1a1a1a;
+}
+
+body { background: var(--bg); color: var(--text); transition: 0.3s; }
+
+/* Footer Styling */
+.footer {
+    border-top: 1px solid var(--border);
     margin-top: 50px;
 }
 
-.footer-box{
+.footer-cta-box {
+        border-bottom:#000 solid 3px;
+    text-align: center;
+    padding: 80px 20px;
+    background-color: var(--footer-bg);
+}
+
+.ready-text { font-size: 11px; font-weight: bold; margin-bottom: 10px; }
+.serif-h2 { font-family: 'Georgia', serif; font-size: 32px; margin-bottom: 30px; }
+
+.footer-main-links {
+    border:#000 solid 3px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 60px 40px;
+    border-top: 1px solid var(--border);
+}
+
+.footer-column h3 { font-size: 13px; margin-bottom: 20px; }
+
+.footer-input {
+    margin-top: 15px;
     display: flex;
-    flex-direction: column;
+    border-bottom: 1px solid var(--text);
 }
 
-.footer-box h3{
-    margin-bottom: 20px;
+.footer-input input {
+    border: none;
+    background: transparent;
+    padding: 10px 0;
+    width: 100%;
+    color: var(--text);
 }
 
-.footer-box a{
-    text-decoration: none;
-    color: #bbb;
-    margin-bottom: 12px;
+.join-now-inline,.join-black-btn {
+    background: var(--text);
+    color: var(--bg);
+    border: none;
+    padding: 7px 15px;
+    font-weight: bold;
+    font:20px;
+    font-size: 12px;
+    border:#000 solid 2px;
+    cursor: pointer;
+    border-radius:4px;
+    width:200px;
+}
+input{
+    padding: 7px;
+    margin:10px 0px;
+        border-radius:4px;
+
 }
 
-.footer-box a:hover{
-    color: white;
+.join-now-inline:hover,
+.join-black-btn:hover {
+    background: white;
+    color: black;
+    border-radius:4px;
+    border:#000 solid 1px;
+
+
 }
+.footer-bottom {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; 
+    gap: 5px;              
+    padding: 30px 40px;
+    border-top: 30px solid black;
+}
+
+.theme-switcher {
+    display: flex;
+    gap: 10px; 
+}
+.footer-bottom p {
+    margin: 0;
+    font-size: 12px;
+    color: var(--gray-text);
+}
+
+.social-icons{
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+.footer-bottom {
+    position: relative;      
+    display: flex;
+    flex-direction: column;  
+    align-items: flex-start; 
+    padding: 40px;           
+    border-top: 1px solid var(--border);
+    gap: 15px;               
+}
+
+/* Social icons ko right corner mein bhejne ke liye */
+.align-right-top {
+    position: absolute;      
+    top: 40px;               
+    right: 40px;             
+    display: flex;
+    gap: 20px;               
+}
+
+.align-right-top i {
+    font-size: 20px;
+    color: var(--text);    
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.align-right-top i:hover {
+    opacity: 0.6;            
+}
+
 
 
 @media(max-width:1200px){

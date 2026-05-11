@@ -355,3 +355,35 @@ resetBtn.addEventListener("click", ()=>{
     productsSection.innerHTML = originalHTML;
 
 });
+
+
+const lightBtn = document.getElementById("light-mode");
+const darkBtn = document.getElementById("dark-mode");
+
+const savedTheme = localStorage.getItem("theme") || "light";
+document.documentElement.setAttribute("data-theme", savedTheme);
+
+function updateButtons(theme) {
+    lightBtn.classList.remove("active");
+    darkBtn.classList.remove("active");
+
+    if (theme === "light") {
+        lightBtn.classList.add("active");
+    } else {
+        darkBtn.classList.add("active");
+    }
+}
+
+updateButtons(savedTheme);
+
+lightBtn.addEventListener("click", () => {
+    document.documentElement.setAttribute("data-theme", "light");
+    localStorage.setItem("theme", "light");
+    updateButtons("light");
+});
+
+darkBtn.addEventListener("click", () => {
+    document.documentElement.setAttribute("data-theme", "dark");
+    localStorage.setItem("theme", "dark");
+    updateButtons("dark");
+});
